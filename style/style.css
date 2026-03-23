@@ -1,0 +1,460 @@
+@charset "UTF-8";
+
+/* Importação de fonte utilizada no projeto */
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
+
+/* Reset */
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    
+}
+/* Variáveis das cores do projeto*/
+:root {
+    --cor-fundo: #0a192f;
+    --cor-fundo2:#112240;
+    --cor-texto: #b4cdf3;
+    --cor-destaque: #B58952;
+    --cor-texto2: #000000;
+}
+/* Estilo geral da página */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(200deg,#b4cdf3,#112240);
+    color: var(--cor-fundo);
+    line-height: 1.6;
+    font-family: 'Inter', sans-serif;
+}
+main {
+    flex: 1; /* Faz o conteúdo principal ocupar todo o espaço vazio da tela */
+    display: flex;
+    flex-direction: column;
+}
+/* Container padrão para as seções principais */
+#sobre-mim, #formacao, #meios-de-contato {
+    padding: 25px;
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+}
+
+/* -----------------------------------HEADER-----------------------------------*/
+/* Cabeçalho com logo, nome e menu */
+#header  {  
+    background-color: var(--cor-fundo);
+    padding: 10px 2% ;
+    display: flex;
+    align-items: flex-end;
+    border-bottom: 3px double var(--cor-destaque);
+}
+/* Posicionamento do Menu de navegação a direita utilizando margin-left auto*/
+#nav {
+    margin-left: auto;
+    align-self: center;
+}
+/* Posiciona os itens da lista lado a lado, remove estilo da lista, e cria espaçamento entre os links */
+#nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+/* Links do menu (remoção de decoração) */
+#nav a {
+    color: var(--cor-texto);
+    text-decoration: none;
+}
+/* Efeito nos links ao passar o mouse, para melhorar a Experiência do Usuário */
+#nav a:hover {
+    background-color: var(--cor-destaque);
+    color: var(--cor-fundo);
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.5s ease; 
+}
+/* Estilização do cabeçalho com leve ajuste de posição */
+#header h1 {
+    font-family: 'Pinyon Script', cursive;
+    font-size: 40px;  
+    color: var(--cor-destaque);
+    margin-left: 15px;
+    line-height: 1;
+    transform: translate(0, -9px);
+}
+
+/* -----------------------------------SOBRE MIM-----------------------------------*/
+/* Display:flex para alinhar foto e texto de apresentação lado a lado */
+#sobre-mim{  
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}     
+/* Contorno, arredondamento e sombra da imagem */
+.sobre-imagem img {
+    width: 280px;
+    border-radius: 15px;
+    border: 2px solid var(--cor-destaque);
+    box-shadow: 0 10px 30px #b5885244;
+}
+/* Título da seção */
+.sobre-texto h2 {
+    font-family: 'Pinyon Script', cursive;
+    font-size: 4.5rem;
+    color: var(--cor-fundo);
+    text-shadow: 1px 1px 4px var(--cor-destaque);
+    text-align: center;
+}
+/* Texto sobre tragetoria */
+.sobre-texto p {
+    color: var(--cor-texto2);
+    line-height: 2;
+    text-align: justify;
+}
+
+/* -----------------------------------SEÇÃO HABILIDADES-----------------------------------*/
+/* Seção Habilidades */
+#habilidades {
+    flex: 1;
+    background-color: var(--cor-fundo2);
+    text-align: center;
+    border-top: 3px double var(--cor-destaque);
+    padding: 30px;
+}
+#habilidades h2 {
+    margin-bottom: 20px;
+    color: var(--cor-destaque);
+}
+/* Uso de Grid com auto-fit para tornar a lista de skills responsiva automaticamente */
+.habilidades-lista {
+    display:  grid;
+    list-style: none;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); 
+ }
+
+.habilidades-lista li {
+    color: var(--cor-texto);
+    padding: 20px;
+    border: 1px solid #233554;
+    border-radius: 12px;
+}
+/* Efeito nos cards ao passar o mouse, para melhorar a Experiência do Usuário */
+.habilidades-lista li:hover {  
+    border-color: #B58952;
+    transform: translateY(-8px); /* botão sobe ao passar o mouse */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); 
+    transition: all 0.5s ease;
+}
+
+/* -----------------------------------FORMAÇÃO-----------------------------------*/
+/* Layout seção formação */
+#formacao h1 {
+    font-family:  'Pinyon Script', cursive;
+    font-size: 4.0rem;
+    color: var(--cor-fundo);
+    text-shadow: 2px 2px 4px var(--cor-destaque);
+    text-align: center;
+    margin-bottom: 10px;
+}
+.formacao-introducao {
+    color: var(--cor-texto2);
+    text-align: center;
+}
+.formacao, .idioma-container, .formacao-introducao {
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Container Flex-wrap para que os cards quebrem de linha em telas menores */
+.formacao {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap; 
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+/* Estilização padronizada para os cards */
+.card-formacao {
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo2);
+    padding: 20px;
+    border-radius: 12px;
+    flex: 1;
+    min-width: 320px;
+    border: 1px solid rgba(181, 137, 82, 0.1);
+    box-shadow: 0 10px 30px rgba(2, 12, 27, 0.5);
+    
+}
+/* Efeito nos links ao passar o mouse, para melhorar a Experiência do Usuário */
+.card-formacao:hover, .idioma-container:hover {
+    transform: translateY(-8px);
+    border-color: var(--cor-destaque);
+    transition: all 0.5s ease;
+}
+/* layout h2 com linha inferior*/
+.card-formacao h2 {
+    color: var(--cor-destaque);
+    font-size: 1.4rem;
+    max-width: 100%;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(181, 137, 82, 0.2); 
+}
+/* Remove estilo da Lista */
+.card-formacao li {
+    list-style: none;
+    line-height: 2;
+    font-size: 1.1rem;
+}
+/* Destaque titulo */
+.card-formacao strong {
+    color: var(--cor-destaque);
+}
+
+/* -----------------------------------SEÇÃO IDIOMA-----------------------------------*/
+/* Layout seção idioma*/
+.idioma-container {
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo2);
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    border-top: 3px double var(--cor-destaque);
+}
+.idioma-container h2 {
+    color: var(--cor-destaque);
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(181, 137, 82, 0.2); 
+}
+/* Alinhamento e distribuição da informação interna */
+.idioma {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+/* Destaque titulo */
+.idioma-item strong {
+    display: block;
+    color: var(--cor-texto);
+}
+
+/* -----------------------------------PORTIFÓLIO-----------------------------------*/
+/* Container Flex-wrap para que os cards quebrem de linha em telas menores */
+#portfolio{
+    padding: 20px;
+    margin: auto;
+}
+
+.portfolio  {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap; 
+}
+#portfolio h1 {
+    font-family:  'Pinyon Script', cursive;
+    font-size: 4.0rem;
+    color: var(--cor-fundo);
+    text-shadow: 2px 2px 4px var(--cor-destaque);
+    text-align: center;
+    margin: 20px;
+}
+/* Estilização dos cards e efeito de transição suave*/
+.card-portfolio {
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo2);
+    padding: 20px;
+    border-radius: 12px;
+    flex: 1;
+    border: 1px solid rgba(181, 137, 82, 0.1);
+    box-shadow: 0 10px 30px rgba(2, 12, 27, 0.5);
+    transition: all 0.3s ease;
+}
+/* Botão de direcionamento para Acessar o projeto */
+.card-portfolio a {
+    text-decoration: none;
+    background-color: var(--cor-destaque);
+    color: var(--cor-fundo);
+    padding: 10px;
+    border-radius: 12px;
+    font-size: small;
+    text-align: center;
+}
+/* Posicionamento botão acesse */
+.card-acesse {
+    display: flex;
+    font-size: 1.1rem;
+    justify-content: space-around;
+    align-items: start;
+    gap:20px;
+    border-bottom: 1px solid rgba(181, 137, 82, 0.2);
+}
+.card-portfolio h3 {
+    color: var(--cor-texto);
+    text-align: center;
+    padding: 10px;
+    padding-bottom: 10px;
+    min-width: 150px;
+}
+/* Destaque titulo */
+.card-portfolio strong {
+    color: var(--cor-destaque);
+}
+.funcionalidades {
+    border: 1px solid rgba(181, 137, 82, 0.2);
+    padding: 20px;
+}
+/* Remove estilo da Lista */
+.funcionalidades li {
+    text-align: justify;
+    line-height: 2;
+    list-style: none;
+    font-size: 0.9rem;
+}
+/* Adiciona traço(-) como Marcador */
+.funcionalidades li::before {
+    content: "-";
+    margin: 10px;
+    color: var(--cor-destaque);
+}
+.card-portfolio .preview {
+    text-align: center;
+}
+.card-portfolio img {
+   display: block;
+   margin: 20px auto;
+   max-width: 100%;
+   box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* -----------------------------------CONTATOS-----------------------------------*/
+/* Grid para separar informações de contato do formulário de mensagem */
+#meios-de-contato {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+    flex-wrap: wrap;
+    gap: 30px;
+}
+#contato, #mensagem {
+    color: var(--cor-texto);
+    padding: 30px;
+    height: 100%;
+    min-width: 350px;
+    background-color: var(--cor-fundo2);
+    text-align: center;
+    border-radius: 12px; 
+}
+#contato, #mensagem h1 {
+    margin-bottom: 30px;
+    color: var(--cor-destaque);
+    text-align: center;
+}
+#contato p {
+    color: var(--cor-texto);
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+.lista-links {
+    list-style: none;
+    display:  flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;  
+    gap:20px;
+}
+.lista-links li {
+    background-color: var(--cor-fundo2);
+    padding: 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background-color: var(--cor-fundo);
+}
+.lista-links a {
+    color: var(--cor-texto);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.lista-links li:hover {
+    color: var(--cor-texto);
+    border-color: #B58952;
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+#mensagem form{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+#mensagem label{
+    font-weight:600;
+}
+/* Estilização dos campos de input para manter a identidade visual escura */
+#mensagem input,
+#mensagem textarea{
+    padding:10px;
+    border-radius:6px;
+    border:1px solid #233554;
+    background:#0a192f;
+    color:var(--cor-texto);
+}
+#mensagem textarea{
+    min-height:200px;
+}
+/* Botão de envio com cursor visual no hover */
+#mensagem button{
+    margin-top:15px;
+    padding:12px;
+    border:none;
+    border-radius:6px;
+    background:var(--cor-destaque);
+    color:#0a192f;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+#mensagem button:hover{
+    opacity:0.8;
+}
+
+/* -----------------------------------footer-----------------------------------*/
+footer {
+    background-color: var(--cor-fundo);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+}
+
+/* -----------------------------------RESPONSIVIDADE-----------------------------------*/
+/* Ajustes para dispositivos móveis (telas até 768px) */
+@media (max-width: 768px) {
+    /* Empilhamento vertical do cabeçalho e centralização dos itens */
+    /* HEADER */
+    #header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    #header img {
+        width: 70px;
+    }
+    #header h1 {
+        margin: 10px 0;
+    }
+
+    /* MENU */
+    /* Centralização do menu */
+    #nav {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    /* SOBRE MIM */
+    /* Ajuste da seção sobre mim para ocupar a largura total em telas pequenas */
+    #sobre-mim {
+        flex-direction: column;
+    }
+}

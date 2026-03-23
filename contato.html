@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título da aba do navegador -->
+    <title>Bárbara Dalto</title>
+    <!-- Ícone personalizado da aba (favicon) -->
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <!-- Link para o CSS -->
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <!-- Header com logo, nome e menu -->
+    <header id="header">
+        <img src="images/logo.png" alt="Ícone de Bárbara Dalto" width="90">
+        <h1>Bárbara Dalto</h1>
+        <!-- Menu que possibilita a navegação entre as páginas -->
+        <nav id="nav">
+            <ul>
+                <li><a href="index.html">Sobre mim</a></li>
+                <li><a href="formacao.html">Formação</a></li>
+                <li><a href="portfolio.html">Portfólio</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="meios-de-contato">
+        <!-- Seção com meios de contato e redes sociais -->
+        <section id="contato">
+            <h1>Contato</h1>
+            <!-- Introdução -->
+            <p>Fique à vontade para entrar em contato comigo através dos seguintes meios:</p>
+                <!-- Lista de links para contato e redes sociais -->
+                <ul class="lista-links">
+                    <li>💼<a href="https://www.linkedin.com/in/barbaradalto/" target="_blank" rel="noopener noreferrer"> LinkedIn</a></li>
+                    <li>💻<a href="https://github.com/BarbaraDalto/" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                    <li>📷<a href="https://www.instagram.com/barbara_dalto/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                    <li>💬<a href="https://wa.me/5551982206255" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+                    <li>📞 <strong>Telefone: (51) 98220-6255</strong></li>
+                    <li>📧 <strong>Email: barbara.contatos@hotmail.com</strong></li>
+                </ul>
+        </section>
+
+        <!-- Seção com formulário para envio de mensagem -->
+        <section id="mensagem">
+            <h1>Deixe sua Mensagem</h1>
+            <!-- Formulário para contato -->
+            <form>
+                <!-- Campo para inserir Nome -->
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+                <!-- Campo para inserir E-mail -->
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="_replyto" required>
+                <!-- Campo para inserir Mensagem -->
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <!-- Botão para envio do formulário -->
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Rodapé com informações de autoria e direitos autorais -->
+    <footer>
+        <p>&copy; 2026 Desenvolvido por Bárbara Dalto. Todos os direitos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
