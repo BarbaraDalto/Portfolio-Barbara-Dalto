@@ -28,6 +28,6 @@ O projeto foi desenvolvido como parte da minha formação em Engenharia de Softw
 https://barbaradalto.github.io/Portfolio-Barbara-Dalto/
 
 ## 📷 Preview
-<img width="1916" height="954" alt="image" src="https://github.com/user-attachments/assets/8ef6f5c1-29c6-4249-b3fc-7e1607279811" />
+<img width="1917" height="911" alt="image" src="https://github.com/user-attachments/assets/8917ce21-ef5b-4047-acd6-42cbd264592e" />
 
 
